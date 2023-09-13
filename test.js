@@ -117,7 +117,7 @@ const digit_sequence = "226";
 const num_ways = numDecodings(digit_sequence);
 console.log("Number of decoding ways:", num_ways);
 
-// Test-5 iven a number n find the number of pairs (x,y) where both x and y are less than n and highest common factor (hcf) of x and y is 1 javascript
+// Test-5 given a number n find the number of pairs (x,y) where both x and y are less than n and highest common factor (hcf) of x and y is 1 javascript
 function gcd(a, b) {
     if (b === 0) {
         return a;
@@ -143,3 +143,6 @@ function countCoprimePairs(n) {
 const n = 10;
 const numPairs = countCoprimePairs(n);
 console.log(`Number of coprime pairs less than ${n}:`, numPairs);
+
+
+
