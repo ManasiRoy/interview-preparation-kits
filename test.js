@@ -18,31 +18,6 @@ let arr = [2, "b", 4, "d", 3, "a", "c", "e", 5, 1];
 console.log(numbersFirstAlphabetsSecond(arr));
 
 
-
-// Test 2 - #1: Find the length of the longest substring without repeating characters
-let getLength = function (str) {
-    let currentString = [];
-    let finalLength = 0;
-
-    for (let i = 0; i < str.length; i++) {
-        const currentCharacterIndex = currentString.indexOf(str[i]);
-
-        if (currentCharacterIndex !== -1) {
-            currentString.splice(0, currentCharacterIndex + 1);
-        }
-
-        currentString.push(str[i]);
-
-        finalLength = Math.max(finalLength, currentString.length);
-    }
-
-    return finalLength;
-};
-
-const str = "abbbcabcdefef";
-
-console.log(getLength(str));
-
 // Test-3 - Rotate 2D matrix clockwise The output should be [[6, 3, 0], [7, 4, 1], [8, 5, 2]];
 const clockWise = (mat) => {
     for (let r = 0; r < mat.length; r++) {
@@ -64,7 +39,7 @@ let m = [
 ];
 console.log(clockWise(m));
 
-// Test-4 - Find the second largest numbers
+// Test-3 - Find the second largest numbers
 function findSecondLargest(arr) {
     if (arr.length < 2) {
         return "Array should have at least two elements";
@@ -93,7 +68,7 @@ const numbers = [5, 2, 8, 9, 1, 10];
 const secondLargest = findSecondLargest(numbers);
 console.log("Second largest number:", secondLargest);
 
-// Test-5 Find the number of decoding of digit sequence in javascript
+// Test-4 Find the number of decoding of digit sequence in javascript
 function numDecodings(s) {
     const n = s.length;
     const dp = new Array(n + 1).fill(0);
