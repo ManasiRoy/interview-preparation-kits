@@ -143,6 +143,3 @@ function countCoprimePairs(n) {
 const n = 10;
 const numPairs = countCoprimePairs(n);
 console.log(`Number of coprime pairs less than ${n}:`, numPairs);
-
-
-
