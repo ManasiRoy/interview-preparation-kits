@@ -1,24 +1,4 @@
-// Test 1 - The output should be; [2, 4, 3, 5, 1, "b", "d", "a", "c", "e"];
-let numbersFirstAlphabetsSecond = (arr) => {
-    let numbers = [];
-    let alphabets = [];
-    let finalArr = [];
-
-    numbers = arr.filter((val) => typeof val === "number");
-
-    alphabets = arr.filter((val) => typeof val === "string");
-
-    finalArr = [...numbers, ...alphabets];
-
-    return finalArr;
-};
-
-let arr = [2, "b", 4, "d", 3, "a", "c", "e", 5, 1];
-
-console.log(numbersFirstAlphabetsSecond(arr));
-
-
-// Test-3 - Rotate 2D matrix clockwise The output should be [[6, 3, 0], [7, 4, 1], [8, 5, 2]];
+// Test-1 - Rotate 2D matrix clockwise The output should be [[6, 3, 0], [7, 4, 1], [8, 5, 2]];
 const clockWise = (mat) => {
     for (let r = 0; r < mat.length; r++) {
         for (let c = 0; c < r; c++) {
@@ -39,36 +19,9 @@ let m = [
 ];
 console.log(clockWise(m));
 
-// Test-3 - Find the second largest numbers
-function findSecondLargest(arr) {
-    if (arr.length < 2) {
-        return "Array should have at least two elements";
-    }
+// ======================================================================== //
 
-    let largest = Math.max(arr[0], arr[1]);
-    let secondLargest = Math.min(arr[0], arr[1]);
-
-    for (let i = 2; i < arr.length; i++) {
-        if (arr[i] > largest) {
-            secondLargest = largest;
-            largest = arr[i];
-        } else if (arr[i] > secondLargest && arr[i] !== largest) {
-            secondLargest = arr[i];
-        }
-    }
-
-    if (secondLargest === -Infinity) {
-        return "No second largest element found";
-    }
-
-    return secondLargest;
-}
-
-const numbers = [5, 2, 8, 9, 1, 10];
-const secondLargest = findSecondLargest(numbers);
-console.log("Second largest number:", secondLargest);
-
-// Test-4 Find the number of decoding of digit sequence in javascript
+// Test-2 Find the number of decoding of digit sequence in javascript
 function numDecodings(s) {
     const n = s.length;
     const dp = new Array(n + 1).fill(0);
@@ -92,7 +45,10 @@ const digit_sequence = "226";
 const num_ways = numDecodings(digit_sequence);
 console.log("Number of decoding ways:", num_ways);
 
-// Test-5 given a number n find the number of pairs (x,y) where both x and y are less than n and highest common factor (hcf) of x and y is 1 javascript
+
+// =============================================================== //
+
+//Test-3 given a number n find the number of pairs (x,y) where both x and y are less than n and highest common factor (hcf) of x and y is 1 javascript
 function gcd(a, b) {
     if (b === 0) {
         return a;
