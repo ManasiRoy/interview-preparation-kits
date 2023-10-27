@@ -1,16 +1,16 @@
 let getLength = function (str) {
-    let currentString = [];
+    let xyz = [];
     let finalLength = 0;
 
     for (let i = 0; i < str.length; i++) {
-        const currentCharacterIndex = currentString.indexOf(str[i]);
+        const abc = xyz.indexOf(str[i]);
 
-        if (currentCharacterIndex !== -1) {
-            currentString.splice(0, currentCharacterIndex + 1);
+        if (abc !== -1) {
+            xyz.splice(0, abc + 1);
         }
 
-        currentString.push(str[i]);
-        finalLength = Math.max(finalLength, currentString.length);
+        xyz.push(str[i]);
+        finalLength = Math.max(finalLength, xyz.length);
     }
 
     return finalLength;
