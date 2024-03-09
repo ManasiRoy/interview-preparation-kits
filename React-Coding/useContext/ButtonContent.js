@@ -3,6 +3,8 @@ import ThemeContext from "./context";
 
 const ButtonContent = () => {
     const theme = useContext(ThemeContext);
-    return <button style={{ backgroundColor: theme }}>{theme}</button>;
+    return (
+    <button style={{ backgroundColor: theme }}>{theme}</button>
+    )
 };
 export default ButtonContent;

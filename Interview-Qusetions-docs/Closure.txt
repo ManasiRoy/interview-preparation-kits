@@ -1,0 +1,13 @@
+A closure is a feature in JavaScript where a function retains access to variables from its outer (enclosing) scope, even after the outer function has finished executing. In simpler terms, a closure allows a function to remember and access the variables in the scope where it was created.
+
+const ParentFunc = () => {
+  let name = "Parent Div";
+  
+  const ChildFunc = () => {
+    let name = "I'm Child Div"
+    console.log(name)
+  }
+  ChildFunc();
+  console.log(name)
+}
+ParentFunc()

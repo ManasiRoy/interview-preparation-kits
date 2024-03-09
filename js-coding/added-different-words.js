@@ -7,5 +7,5 @@ const firstName = "jasmeet";
 const lastName = "singh";
 const age = "20";
 
-const email = createEmail(firstName, lastName, age);
-console.log(email);
+const properEmail = createEmail(firstName, lastName, age);
+console.log(properEmail);
