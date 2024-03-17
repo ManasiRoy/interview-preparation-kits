@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import ThemeContext from "./context";
 import ButtonContent from "./ButtonContent";
 
