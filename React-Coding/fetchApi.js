@@ -16,9 +16,6 @@ const FetchApi = () => {
         // .then(data => setData(data?.data))
         fetchData()
     }, [])
-
-
-
     
     return (
         <div>
