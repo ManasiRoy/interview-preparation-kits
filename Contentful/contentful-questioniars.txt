@@ -1,0 +1,71 @@
+What’s the difference between the generate migration command and the rest of the migrations scripts?
+
+Ans. Generate migration command can fetch the entire content model, while migration scripts allow you to make targeted changes to selected content types, entries, fields, and tags.
+
+Contentful's Rich Text Field response is returned as pure JSON rather than HTML.
+
+Q. Default values are available for the following field types:
+
+Ans. number, short text, Boolean, date
+
+
+Content Model is the overall architecture of your content. 
+
+A Content Type is the structure or container for a piece of content.
+
+An Entry is a piece of content based on a content type.
+
+Fields (aka attributes) represents different properties or characteristics for a piece of content. Your development team will decide which fields to include and what data types to assign each field (text, rich text, number, date, location, media, boolean, JSON object, or reference).
+
+digital asset management (DAM) software to help you manage and deliver your digital assets
+
+A Reference is a link between two content types via a field (specifically a "Reference field"). A reference creates a relationship between two content types. Your development team will set up these references for you, which will allow you to create entries that are linked to one another.
+
+Identify the two types of reference fields.
+
+1-to-1 reference field
+This is a reference field that allows content authors to link to a single entry.
+
+1-to-many reference field
+This is a reference field that allows content authors to link to multiple entries. 
+
+
+Structured Content
+A content model is the overall architecture of your content. It gives structure and organization to your content by dividing it up into chunks or, what we call, content types.  
+
+
+An Asset is any media file that has been uploaded to Contentful, such as images, video, audio files, .pdfs, and more. Content types can include fields for "media" which allow content authors to then link to uploaded assets. 
+
+What is a content preview?
+A content preview allows editorial teams to review their content (both draft and published) within context by displaying it in a preview environment. 
+As a developer you can use Contentful's Preview API to set up a live preview site for your editorial teams.
+
+Content Delivery API vs Preview API
+Before we jump into how to set up and configure a content preview, it's important to understand the difference between Contentful's Preview API and Content Delivery API (CDA) and when you might use each one.
+They are both read-only APIs but the CDA is used to retrieve Published content from Contentful while the Content Preview API is used to retrieve Published, Changed, or Draft content.
+
+If you want to display unpublished content for your content creators, what API would you use?
+Ans.Preview API
+
+Content Delivery API - access token
+A.Use this access token to consume published content 
+
+Content Preview API - access token
+A.Use this access token to preview and consume unpublished content (i.e. content in “Draft” status). 
+
+
+What are webhooks and why are they useful?
+Webhooks allow you to connect an app to different services. Webhooks are user-defined callbacks over HTTP that can be used to send notifications when data in Contentful is changed. 
+
+What kind of changes? Webhooks can be triggered by data changes on any asset, entry, content type, tasks, and releases. For example, you can create a webhook that sends a Slack notification anytime an asset is deleted. 
+ 
+custom webhook
+A. Custom URL and HTTP method, Custom headers, Custom payload
+
+Why use custom webhooks?
+A.Pre-configured webhook templates are fast and easy to use but, in some cases, a custom webhook may better support your project’s unique workflows and needs. 
+For example, there is a specific third-party service you want to use or a more complex use case that requires customizing the request or payload. That’s where custom webhooks come in. There are so many ways you can customize your webhook: types of trigger events, filters, headers, and more. The possibilities are endless.
+
+
+
+

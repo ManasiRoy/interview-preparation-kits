@@ -14,3 +14,16 @@ const numbersFirstAlphabetsSecond = (arr) => {
 let arr = [2, "b", 4, "d", 3, "a", "c", "e", 5, 1];
 
 console.log(numbersFirstAlphabetsSecond(arr));
+
+
+//if the results need to be maintain sequence then
+console.log(arr.sort());
+
+//only print numbers
+const item = [2, 4, 3, 5, 1, "b", "d", "a", "c", "e"];
+
+item.forEach(element => {
+  if (typeof element === 'number') {
+    console.log(element);
+  }
+});
