@@ -1,4 +1,4 @@
-let data = [{name: 'a'}, {name: 'c'}, {name: 'b'}, {name: 'a'}, {name: 'b'}, {name: 'c'}];
+let data = [{ name: 'a' }, { name: 'c' }, { name: 'b' }, { name: 'a' }, { name: 'b' }, { name: 'c' }];
 
 let uniqueNames = new Set();
 let result = data.filter(item => {
@@ -14,11 +14,10 @@ console.log(result);
 
 
 // ternary operator
-let datas = [{name: 'a'}, {name: 'c'}, {name: 'b'}, {name: 'a'}, {name: 'b'}, {name: 'c'}];
+let datas = [{ name: 'a' }, { name: 'c' }, { name: 'b' }, { name: 'a' }, { name: 'b' }, { name: 'c' }];
 
+// Remove Duplicate Object
 let uniqueName = new Set();
-let results = datas.filter(item => 
-    uniqueName.has(item.name) ? false : (uniqueName.add(item.name), true)
-);
+let results = datas.filter(item => uniqueName.has(item.name) ? false : (uniqueName.add(item.name), true));
 
 console.log(results);
