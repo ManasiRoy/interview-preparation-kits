@@ -14,7 +14,11 @@ const ChildComponent = ({ onData }) => {
   return (
     <div>
       <h2>Child Component</h2>
-      <input type="text" value={childData} onChange={handleInputChange} />
+      <input 
+        type="text" 
+        value={childData} 
+        onChange={handleInputChange}
+       />
       <button onClick={sendDataToParent}>Send Data to Parent</button>
     </div>
   );
