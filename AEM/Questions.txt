@@ -1,0 +1,16 @@
+Explain AEM implementation in existing project?
+What are the modules available in AEM?
+Discuss on AEM arch.
+How to create custom components in AEM?
+How to create client lib in AEM?
+What is Adobe Experience Manager (AEM) and its key features?
+Explain the difference between AEM Sites and AEM Assets.
+How do you create a new component in AEM?
+Describe the process of creating a custom workflow in AEM.
+How do you implement error handling in AEM workflows?
+What is Sling in the context of AEM?
+What is the purpose of the Sling Model in AEM?
+Write a simple JavaScript code to fetch data from an AEM endpoint using AJAX.
+Explain the difference between a page and a template in AEM.
+How do you optimize AEM performance?
+Explain how to integrate AEM with Adobe Analytics.
