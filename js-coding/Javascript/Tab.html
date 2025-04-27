@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,30 +9,36 @@
         body {
             font-family: Arial, sans-serif;
         }
+
         .tabs {
             display: flex;
             cursor: pointer;
         }
+
         .tab {
             padding: 10px 20px;
             border: 1px solid #ccc;
             border-bottom: none;
             background: #f4f4f4;
         }
+
         .tab.active {
             background: #fff;
             font-weight: bold;
         }
+
         .tab-content {
             display: none;
             padding: 20px;
             border: 1px solid #ccc;
         }
+
         .tab-content.active {
             display: block;
         }
     </style>
 </head>
+
 <body>
     <div class="tabs">
         <div class="tab active">Tab 1</div>
@@ -44,20 +51,21 @@
         <div class="tab-content">Content for Tab 3</div>
     </div>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const tabs = document.querySelectorAll(".tab");
-            const contents = document.querySelectorAll(".tab-content");
-            
-            tabs.forEach((tab, index) => {
+        function tabFunc() {
+            const tabs = [...document.querySelectorAll(".tab")];
+            const contents = [...document.querySelectorAll(".tab-content")];
+
+            tabs.map((tab, index) => {
                 tab.addEventListener("click", () => {
-                    tabs.forEach(t => t.classList.remove("active"));
-                    contents.forEach(c => c.classList.remove("active"));
-                    
+                    tabs.map(t => t.classList.remove("active"));
+                    contents.map(c => c.classList.remove("active"));
                     tab.classList.add("active");
                     contents[index].classList.add("active");
                 });
             });
-        });
+        };
+        tabFunc();
     </script>
 </body>
+
 </html>

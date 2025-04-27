@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+        }
+
+        input,
+        select,
+        button {
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Simple Calculator</h2>
+
+    <label>Number 1: <input type="number" id="num1"></label><br>
+    <label>Operator:
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">−</option>
+            <option value="*">×</option>
+            <option value="/">/</option>
+        </select>
+    </label><br>
+    <label>Number 2: <input type="number" id="num2"></label><br>
+    <button onclick="calculate()">Calculate</button>
+
+    <h3>Result: <span id="result"></span></h3>
+
+    <script>
+        function calculator(num1, operator, num2) {
+            switch (operator) {
+                case '+':
+                    return num1 + num2;
+                case '-':
+                    return num1 - num2;
+                case '*':
+                    return num1 * num2;
+                case '/':
+                    if (num2 === 0) {
+                        return 'Cannot divide by zero';
+                    }
+                    return num1 / num2;
+                default:
+                    return 'Invalid operator';
+            }
+        }
+
+        function calculate() {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const operator = document.getElementById('operator').value;
+            const num2 = parseFloat(document.getElementById('num2').value);
+            const result = calculator(num1, operator, num2);
+
+            const display = typeof result === 'number' ? result.toFixed(2) : result;
+            document.getElementById('result').textContent = display;
+        }
+
+    </script>
+</body>
+
+</html>
