@@ -48,14 +48,16 @@ function titleCase(str) {
 function countVowels(str) {
     const vowels = 'aeiouAEIOU';
     let count = 0;
+    let VowelsFind = []
   
     for (let char of str) {
       if (vowels.includes(char)) {
         count++;
+        VowelsFind.push(char)
       }
     }
   
-    return count;
+    return {count, VowelsFind};
   }
   
   // Examples
